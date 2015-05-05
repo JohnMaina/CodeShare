@@ -1,0 +1,23 @@
+<div class="col-xs-10 col-sm-6" ng-controller="commonController as vm">
+<form role="form">
+    <div class="form-group">
+        <div id="respomse"></div>
+        <p>Add Room</p>
+        <label for="roomname">Room Name</label>
+        <div class="input-group">
+            <input type="text" class="form-control" name="roomname" id="inputName" placeholder="Room Name" required="" ng-model="vm.newRoom.name">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="capacity"> Capacity </label>
+        <div class="input-group">
+            <input type="number" class="form-control" id="inputEmergencyPhoneNumberFirst" name="capacity" placeholder="0" required="" ng-model="vm.newRoom.capacity">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+        </div>
+    </div>
+    <div>
+        <button  role="button" class="btn btn-info"ng-click="vm.addRoom()" >Save</button>
+    </div>
+</form>
+</div>

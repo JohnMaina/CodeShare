@@ -1,0 +1,33 @@
+<div ng-controller="commonController as vm"> 
+    <table class="table table-responsive table-bordered">
+        <caption>
+            Select Center. 
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-th"></span> <span>{{vm.selectedCenter.Name}}</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="center in vm.centers" ng-click="vm.selectedCenter.Name = center.name">{{center.name}}</li>
+                    <li class="divider"></li>
+                    <li ng-click="vm.selectedCenter.Name = 'All Centers'">ALL Centers</li>
+                </ul>
+            </div>
+        </caption>
+        <thead>
+            <tr>
+                <th>studentName</th><th>Mobile</th><th>Email</th><th>Date
+                </th><th>Debit</th><th>Receipt No</th><th>Credit</th><th>Invoice No</th>
+                <th>Center</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="statement in vm.feeStatement |filter:vm.selectedCenter.filterName()">
+                <td>{{statement.fname}} {{statement.sname}} {{statement.lname}}</td><td>{{statement.mobile}}</td>
+                <td>{{statement.email}}</td><td>{{statement.dop}}</td><td>{{statement.debit}}</td>
+                <td>{{statement.receiptNumber}}</td><td>{{statement.credit}}</td><td>{{statement.invoiceNumber}}</td>
+                <td>{{statement.centerName}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,33 @@
+<div  ng-controller="tutorController as vm">
+<div >
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Name</div>
+            <div class="col-xs-6">{{vm.tutorPortal[0].fname}} {{vm.tutorPortal[0].sname}} {{vm.tutorPortal[0].lname}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Mobile:</div>
+            <div class="col-xs-6">{{vm.tutorPortal[0].mobile}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Email</div>
+            <div class="col-xs-6">{{vm.tutorPortal[0].email}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Date Contracted</div>
+            <div class="col-xs-6"> {{vm.tutorPortal[0].doc}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Lessons assigned per week</div>
+            <div class="col-xs-6"> {{vm.tutorPortal.Lessoncount}}</div>
+        </div>
+    
+    <p>Instruments</p>
+    <ol>
+        <li ng-repeat="instrument in vm.tutorPortal.Instruments">{{instrument.tutorinstrumentName}}</li>
+    </ol>
+    
+   
+    </div>
+</div>
+    
+   

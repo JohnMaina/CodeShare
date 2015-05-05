@@ -1,0 +1,21 @@
+
+<div ng-controller="studentController as vm">
+        <table class="table table-responsive table-bordered">
+            <thead><tr><th>Day</th><th>Time</th><th>Instrument</th><th>Tutor</th><th>Room</th></tr></thead>
+            <tbody>
+                <tr ng-repeat="lesson in vm.studentPortal.Lessons"><td>{{lesson.day}}</td>
+                    <td>{{lesson.start}}-{{lesson.end}}</td><td>{{lesson.Name}}</td><td>{{lesson.tutorFname}}</td><td>{{lesson.roomName}}</td></tr>
+                
+
+            </tbody>
+        </table>
+         <table class="table table-responsive table-bordered">
+             <caption>Postponed Lessons</caption>
+             <thead><tr><th>ID</th><th>New Date</th><th>Time</th><th>Tutor</th><th>Room</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td>12/3/2015</td><td>8:00-8:30</td><td>James Irush</td><td>Room1</td></tr>
+                <tr><td>1</td><td>12/3/2015</td><td>8:00-8:30</td><td>James Irush</td><td>Room1</td></tr>
+
+            </tbody>
+        </table>
+    </div>

@@ -1,0 +1,43 @@
+<div>
+    
+  <div ng-include="'app/views/manageStudentHeader.html'">
+    
+</div>
+    <div class="studentDetails" ng-controller="studentController as vm">
+    <div  >
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Name</div>
+            <div class="col-xs-6">{{vm.studentPortal[0].fname}} {{vm.studentPortal[0].sname}} {{vm.studentPortal[0].lname}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Mobile:</div>
+            <div class="col-xs-6">{{vm.studentPortal[0].mobile}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Email</div>
+            <div class="col-xs-6">{{vm.studentPortal[0].email}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Date Registered</div>
+            <div class="col-xs-6">{{vm.studentPortal[0].dor}}</div>
+        </div>
+        <div class="row table table-responsive table-bordered">
+            <div class="col-xs-6">Lessons assigned per week</div>
+            <div class="col-xs-6">{{vm.studentPortal.Lessoncount}}</div>
+        </div>
+    </div>
+        <a href="#/editStudentDetails" role="button" class="btn btn-info"> Edit student details</a>
+    <div>
+        <h4>Instruments registered</h4>
+        <ol>
+            <li ng-repeat="instrument in vm.studentPortal.Instruments">
+                {{instrument.studentinstrumentName}} &nbsp;&nbsp; 
+            <a href="#/manageStudent"><h6 class="btn btn-info" ng-click="vm.selectedInstrument.ID=instrument.studentInstrumentID;vm.deleteStudentInstrument()">Delete</h6></a>
+            </li>
+        </ol>     
+    </div>
+        <a href="#/addanotherInstrument" role="button" class="btn btn-info">Add Instrument</a>
+    </div>
+    
+
+</div>

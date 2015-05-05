@@ -1,0 +1,17 @@
+ <div ng-controller="tutorController as vm">
+<table class="table table-responsive table-bordered">
+        <caption>Lessons</caption>
+        <thead>
+            <tr>
+                <th>Student</th><th>Instrument</th><th>Day</th><th>Time</th><th>Room</th><th>Date Started Or Last edited</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="lesson in vm.tutorPortal.Lessons">
+                <td>{{lesson.studentFname}} {{lesson.studentSname}}</td><td>{{lesson.instrumentName}}</td>
+                <td>{{lesson.day}}</td><td>{{lesson.start}}-{{lesson.end}}</td><td>{{lesson.roomName}}</td>
+                <td>{{lesson.dateStarted}}</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>

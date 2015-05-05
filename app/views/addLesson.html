@@ -1,0 +1,96 @@
+<!--<div ng-include="'app/views/editTbMonday.html'"></div>-->
+
+<div ng-controller="timetableController as vm">
+    <div class="container">
+        <div id="response"></div>
+        <div>{{vm.returnedmessage}}fhbvzhjvbzjhvzhjvbhzvjbdjxvvjxvbjdxvjzzzvfvdvdx</div>
+        <div>{{vm.newlesson}}</div>
+        <div class="row">
+            <form role="form">
+                <div class="col-xs-4">
+                   <div ng-controller="studentController as sc">
+                       <label>Student.</label><br>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.newlesson.studentID}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="student in sc.students" ng-click="vm.newlesson.studentID = student.studentID">{{student.fname}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div ng-controller="instrumentController as ic">
+                        <label>Instrument.</label><br>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.newlesson.instrumentID}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="instrument in ic.instruments.instruments" ng-click="vm.newlesson.instrumentID = instrument.instrumentID">{{instrument.Name}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div ng-controller="tutorController as tc">
+                        <label>Tutor.</label><br>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.newlesson.tutorID}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="tutor in tc.tutors" ng-click="vm.newlesson.tutorID = tutor.tutorID">{{tutor.fname}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div ng-controller="commonController as cc">
+                        <label>Room.</label><br>
+                         <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.newlesson.roomID}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="room in cc.room" ng-click="vm.newlesson.roomID = room.roomID">{{room.roomName}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Day.</label><br>
+                      <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.newlesson.day}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="day in vm.days" ng-click="vm.newlesson.day = day.Name">{{day.Name}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Start time (format: 00:00:00)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputEmailFirst" name="time" required="" ng-model="vm.newlesson.stime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="time">End time (format: 00:00:00)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputEmailFirst" name="time" required="" ng-model="vm.newlesson.etime">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-click="vm.savemessage()">
+                        <button role="button" class="form-control btn btn-info" >Save</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

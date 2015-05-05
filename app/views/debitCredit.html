@@ -1,0 +1,53 @@
+<div ng-include="'app/views/manageStudentHeader.html'">
+    
+</div>
+
+<div ng-controller="commonController as vm">
+    <div class="row">
+        <div class="col-xs-4">
+            <form role="form">
+                <div class="form-group">
+                    {{vm.returnedmessage}}
+                    <p>Debit</p>
+                    <label for="debit">Invoice Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="debit" id="inputName" placeholder="Invoice Number" required="" ng-model="vm.Debit.INN">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Amount"> Amount (Ksh) </label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="inputEmergencyPhoneNumberFirst" name="Amount" placeholder="0.00" required="" ng-model="vm.Debit.Amount">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div>
+                    <a  role="button" class="btn btn-info" ng-click="vm.saveDebit()" href="#/studentfeeStatement">Save</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-4">
+            <form role="form">
+                <div class="form-group">
+                    <p>Credit</p>
+                    <label for="credit">Receipt Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="credit" id="inputName" placeholder="Receipt Number" required="" ng-model="vm.Credit.RCN">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Amount"> Amount (Ksh) </label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="inputEmergencyPhoneNumberFirst" name="Amount" placeholder="0.00" required="" ng-model="vm.Credit.Amount">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div>
+                    <a  role="button" class="btn btn-info" ng-click="vm.saveCredit()" href="#/studentfeeStatement">Save</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

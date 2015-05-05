@@ -1,0 +1,101 @@
+<div ng-include="'app/views/timetableheader.html'"></div>
+<div ng-controller="commonController as vm">
+        <table class="table table-responsive table-bordered">
+            <caption class="caption">Wednesday</caption>
+            <thead>
+                <tr>
+                    <th>Room</th><th>6:30-7:00</th> <th>7:00-7:30</th> <th>7:30-8:00</th> <th>8:00-8:30</th> <th>8:30-9:00</th> <th>9:00-9:30</th>
+                    <th>9:30-10:00</th> <th>10:00-10:30</th> <th>10:30-11:00</th><th>11:00-11:30</th> <th>11:30-12:00</th> <th>12:00-12:30</th>
+                    <th>12:30-1:00</th> <th>1:00-1:30</th> <th>1:30-2:00</th> <th>2:00-2:30</th> <th>2:30-3:00</th> <th>3:00-3:30</th>
+                    <th>3:30-4:00</th> <th>4:00-4:30</th> <th>4:30-5:00</th> <th>5:00-5:30</th> <th>5:30-6:00</th> <th>6:00-6:30</th>
+                    <th>6:30-7:00</th> <th>7:00-7:30</th> <th>7:30-8:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="room in vm.room">
+                    <td>{{room.roomName}}</td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'06:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'07:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'07:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'08:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'08:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'09:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'09:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'10:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'10:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'11:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'11:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'12:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'12:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'13:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'13:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'14:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'14:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'15:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'15:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'16:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'16:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'17:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'17:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'18:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'18:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td> 
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'19:00:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                    <td> <p  ng-repeat="studentT in vm.lessons | filter:room.roomName | filter:'Wednesday' 
+                                | filter:'19:30:00'">{{studentT.studentFName + '\n' + studentT.studentSName}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

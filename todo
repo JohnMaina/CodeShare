@@ -1,0 +1,28 @@
+Modify lessons.php to add student second name. Alter the frontend on the timetables to show all student names
+
+Replicate the monday timetable to all the week days
+
+***done***
+Encrypt all sessions ->sessions appear in hashed form
+***done***
+
+***done**
+Under manage instrumets, rooms 
+-> write php scripts to perform respective crud functionalities
+***done** 
+
+***done***
+Check if respective php scripts for registering tutors, receptionists are present
+***done***
+
+Write a php script to edit tutor details. Check editStudents for reference
+
+***done***
+Write a php script to register director and pricipal. Which hashes the passwords for storage in the db
+***done***
+
+***done***
+lev1>fst1.php - ansure all passwords are hashed.
+***done***
+
+Write an editTimetable for monday. The cell should be editable via the <input /> tag

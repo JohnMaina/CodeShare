@@ -1,0 +1,82 @@
+<div ng-controller="tutorController as vm">
+    <div class="container">
+         <div id="response"></div>
+        
+        <div class="row">
+            <form role="form">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label for="inputName">Enter First Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Enter First Name" required="" ng-model="vm.tutor.fname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmergencyPhoneNumber">Enter Second Name</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputEmergencyPhoneNumberFirst" name="inputEmergencyPhoneNumber" placeholder="Enter Second Name" required="" ng-model="vm.tutor.sname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmergencyPhoneNumber">Enter Last Name</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputEmergencyPhoneNumberFirst" name="inputEmergencyPhoneNumber" placeholder="Enter Last Name"  ng-model="vm.tutor.lname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber">Enter PhoneNumber</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputPhoneNumberFirst" name="inputPhoneNumber" placeholder="Enter PhoneNumber" required="" ng-model="vm.tutor.phonenumber">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Enter Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="inputEmailFirst" name="inputEmail" placeholder="Enter Email" required="" ng-model="vm.tutor.email">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div >
+                            <input type="radio"   name="gender" value="Male" ng-model="vm.tutor.gender" checked >Male
+                            <input type="radio"   name="gender" value="Female" ng-model="vm.tutor.gender">Female
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="inputEmailFirst" name="password" placeholder="**********" required="" ng-model="vm.tutor.password">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="inputEmergencyPhoneNumber">Nationality</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputEmergencyPhoneNumberFirst" name="inputEmergencyPhoneNumber" placeholder="optional"  ng-model="vm.tutor.nationality">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label for="inputEmergencyPhoneNumber">Any other information</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputEmergencyPhoneNumberFirst" name="inputEmergencyPhoneNumber" placeholder="optional"  ng-model="vm.tutor.anyotherinfo">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-click="vm.savemessage()">
+                        <button role="button" class="form-control btn btn-info" >Save</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

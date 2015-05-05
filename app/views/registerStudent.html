@@ -1,0 +1,99 @@
+<div ng-controller="studentController as vm">
+    <div class="container">
+        <div id="response"></div>
+        
+        <div class="row">
+            <form role="form">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label for="inputName">Enter First Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="inputName" id="inputName" required="" ng-model="vm.student.fname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sname">Enter Second Name</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputEmergencyPhoneNumberFirst" name="sname"  required="" ng-model="vm.student.sname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Enter Last Name</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputEmergencyPhoneNumberFirst" name="lname"  ng-model="vm.student.lname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phonenumber">Enter PhoneNumber</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputPhoneNumberFirst" name="phonenumber" required="" ng-model="vm.student.phonenumber">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Enter Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="inputEmailFirst" name="inputEmail"  required="" ng-model="vm.student.email">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div >
+                            <input type="radio"   name="gender" value="Male" ng-model="vm.student.gender" checked >Male
+                            <input type="radio"   name="gender" value="Female" ng-model="vm.student.gender">Female
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputdate">Date of Birth (optional)</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="inputdate" name="inputdate" ng-model="vm.student.dob">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div> 
+
+                </div>
+
+                <div class="col-xs-4">
+                    <div>
+                        select center
+                        <div class="btn-group" ng-controller="commonController as cc">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.student.centerID}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="center in cc.centers" ng-click="vm.student.centerID = center.centerID">{{center.name}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password </label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputEmailFirst" name="password" placeholder="**********" required="" ng-model="vm.student.password">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpassword">Confirm Password </label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputEmailFirst" name="cpassword" placeholder="**********" required="" ng-model="vm.student.cpassword">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        
+        <div>
+            <input type="submit" value="Save" class="btn btn-info" ng-click="vm.savemessage()"/>
+        </div>
+    </div>
+
+</div>

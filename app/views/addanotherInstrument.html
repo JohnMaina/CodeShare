@@ -1,0 +1,36 @@
+<div ng-include="'app/views/manageStudentHeader.html'">
+
+</div>
+<div class="row">
+    <div  ng-controller="instrumentController as vm" class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <label>Register another Instrument</label><br>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-th"></span> <span>{{vm.selectedInstrument.Name}}</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="instrument in vm.instruments.instruments" ng-click="vm.selectedInstrument.instrumentID = instrument.instrumentID;vm.selectedInstrument.Name = instrument.Name">
+                        {{instrument.Name}}</li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Select a package</label><br>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-th"></span> <span>{{vm.selectedInstrument.pName}}</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="package in vm.instruments.packages" ng-click="vm.selectedInstrument.pID = package.packageID;vm.selectedInstrument.pName=package.packageName">
+                        {{package.packageName}}</li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a class="btn btn-info" ng-click="vm.instrumentRegister()" href="#/manageStudent">Save</a>
+        </div>
+    </div>
+</div>

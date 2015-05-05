@@ -1,0 +1,15 @@
+<div ng-controller="instrumentController as vm">
+    <table class="table table-responsive table-bordered">
+        <caption>Instruments</caption>
+        <thead><tr><th>Name</th><th>Number of lessons</th><th>Charges</th><th>Action</th><th>Action</th></tr></thead>
+        <tbody>
+            <tr ng-repeat="instrument in vm.instruments.instruments"><td>{{instrument.Name}}</td><td>{{instrument.numberofLessons}}</td>
+                <td>{{instrument.fees}}</td><td>
+                    <a class="btn btn-info" href="#/editInstrument">Edit</a></td>
+                <td><button class="btn btn-info" ng-click="vm.selectedInstrument.ID=instrument.instrumentID;
+                    vm.deleteInstrument()">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <a role="button" class="btn btn-info" href="#/addInstrument">Add Instrument</a>
+</div>

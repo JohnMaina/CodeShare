@@ -1,0 +1,81 @@
+<div ng-controller="commonController as vm">
+    <div class="container">
+        <div id="response"></div>
+        
+        <div class="row">
+            <form role="form">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label for="inputName">Enter First Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="inputName" id="inputName"  required="" ng-model="vm.receptionist.fname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmergencyPhoneNumber">Enter Second Name</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputEmergencyPhoneNumberFirst" name="inputEmergencyPhoneNumber" required="" ng-model="vm.receptionist.sname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmergencyPhoneNumber">Enter Last Name</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputEmergencyPhoneNumberFirst" name="inputEmergencyPhoneNumber" ng-model="vm.receptionist.lname">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber">Enter PhoneNumber</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="inputPhoneNumberFirst" name="inputPhoneNumber" required="" ng-model="vm.receptionist.phonenumber">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Enter Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="inputEmailFirst" name="inputEmail" placeholder="Enter Email" required="" ng-model="vm.receptionist.email">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div >
+                            <input type="radio"   name="gender" value="Male" ng-model="vm.receptionist.gender" checked >Male
+                            <input type="radio"   name="gender" value="Female" ng-model="vm.receptionist.gender">Female
+                        </div>
+                    </div>
+                      <div>
+                         Select Center 
+                    <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-th"></span> <span>{{vm.receptionist.center}}</span> <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li ng-repeat="center in vm.centers" ng-click="vm.receptionist.center = center.centerID">{{center.name}}</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="inputEmailFirst" name="password"  required="" ng-model="vm.receptionist.password">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button role="button" class="form-control btn btn-info" ng-click="vm.savemessage()">Save</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

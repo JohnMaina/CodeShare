@@ -1,0 +1,21 @@
+
+
+<div ng-controller="tutorController as vm" class="selectStudent">
+<div class="homepage" >
+    <p>Select a tutor</p>
+</div>
+<div>
+    <form class="form-group" role="form" method="post">
+        <div class="selectStudentForm">
+            <div class="row"> 
+                <input type="text" required="" class="form-control" placeholder="Student" ng-model="vm.selectedTutor.Name"/>
+            </div>
+            <div  class="row table table-responsive table-bordered"
+                  ng-repeat="tutor in vm.tutors |filter:vm.selectedTutor.Name"  
+                  ng-click="vm.selectedTutor.tutorID=tutor.tutorID; tutorPortalInfo()">
+                <a href="#/manageTutor"> {{tutor.fname}} {{tutor.sname}}</a>
+            </div>
+         </div>
+    </form>
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div ng-controller="commonController as vm">
+    <table class="table table-responsive table-bordered">
+        <caption>Rooms</caption>
+        <thead><tr><th>Name</th><th>Capacity</th><th>Action</th><th>Action</th></tr></thead>
+        <tbody>
+            <tr ng-repeat="roomDetail in vm.room">
+                <td>{{roomDetail.roomName}}</td><td>{{roomDetail.capacity}}</td><td><button class="btn btn-info">Edit</button>
+                </td><td><button class="btn btn-info" ng-click="vm.deleteRoomo.ID=roomDetail.roomID;vm.deleteRoom()">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <a role="button" class="btn btn-info" href="#/addRoom">Add Room</a>
+</div>

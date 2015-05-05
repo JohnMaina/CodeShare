@@ -1,0 +1,30 @@
+<div class="col-xs-10 col-sm-6" ng-controller="instrumentController as vm">
+<form role="form">
+    <div class="form-group">
+        <p>Add Instrument</p>
+        <label for="instname">Instrument Name</label>
+        <div class="input-group">
+            <input type="text" class="form-control" name="instname" id="inputName" placeholder="Instrument Name" required="" ng-model="vm.newInstrument.name">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="nlessons"> Number of lessons </label>
+        <div class="input-group">
+            <input type="number" class="form-control" id="inputEmergencyPhoneNumberFirst" name="nlessons" placeholder="0.00" required="" ng-model="vm.newInstrument.lessons">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+        </div>
+    </div>
+     <div class="form-group">
+        <label for="fee"> Fee</label>
+        <div class="input-group">
+            <input type="number" class="form-control" id="inputEmergencyPhoneNumberFirst" name="fee" placeholder="0.00" required="" ng-model="vm.newInstrument.fees">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+        </div>
+    </div>
+   
+    <div>
+        <button  role="button" class="btn btn-info" ng-click="vm.addInstrument()">Save</button>
+    </div>
+</form>
+</div>

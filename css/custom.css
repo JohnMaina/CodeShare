@@ -1,0 +1,37 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.HomePageheader{
+   background-color: #000;
+    margin-top: 0em;
+    padding-bottom: 1.5em;
+    padding-top: 0.9em;
+    text-align: center;
+}
+.studentDetails{
+    padding-bottom: 5em;
+}
+.mainMenu{
+   
+}
+#mainheader{
+     font-size: 2em;
+    
+    color: #ffffff;
+}
+#logout{
+    font-size: 1.2em;
+   
+}
+.selectStudent{
+    padding: 0.5em 2em 0em 1em;
+    font-size: 1.5em;
+}
+.lev1index{
+    position: absolute;
+    top:30%;
+    left: 30%;
+    font-size: 1.5em;
+    background-color:#2aabd2;
+}
+ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; }
